@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Web-to-Case Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 928px;
+            margin: 0 auto;
+        }
+        form label {
+            display: inline-block;
+            width: 200px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        form input[type="text"], 
+        form textarea, 
+        form select {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px;
+            width: calc(100% - 220px);
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        form textarea {
+            resize: none;
+            height: 60px;
+        }
+        form input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://spotnana--kapartial.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DEi000005sZif" method="POST">
+        <input type="hidden" name="orgid" value="00DEi000005sZif">
+        <input type="hidden" name="retURL" value="http://">
+        
+        <label for="subject">Subject</label>
+        <input id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+        
+        <label for="email">Email</label>
+        <input id="email" maxlength="80" name="email" size="20" type="text" /><br>
+        
+        <label for="00NEi000008pCCR">Trip ID</label>
+        <input id="00NEi000008pCCR" name="00NEi000008pCCR" size="20" type="text" /><br>
+        
+        <label for="00NEi000008pNu1">Traveler's Email</label>
+        <input id="00NEi000008pNu1" maxlength="80" name="00NEi000008pNu1" size="20" type="text" /><br>
+        
+        <label for="description">Description</label>
+        <textarea name="description"></textarea><br>
+        
+        <label for="priority">Priority</label>
+        <select id="priority" name="priority">
+            <option value="">--None--</option>
+            <option value="Critical">Critical</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select><br>
+        
+        <label for="00NEi000008mjO1">Travel Agent Needed?</label>
+        <select id="00NEi000008mjO1" name="00NEi000008mjO1" title="Travel Agent Needed?">
+            <option value="">--None--</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+        
+        <label for="00NEi000008pNsP">Are you the traveler?</label>
+        <select id="00NEi000008pNsP" name="00NEi000008pNsP" title="Are you the traveler?">
+            <option value="">--None--</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+        
+        <input type="hidden" name="00NEi000008pRO9" id="00NEi000008pRO9" value="Technical Support">
+        
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>
